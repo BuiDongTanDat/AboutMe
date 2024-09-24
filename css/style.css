@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'TheSeasonsRegular';
+    src: url('../font/TheSeasonsRegular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'QuestrialRegular';
+    src: url('../font/QuestrialRegular.ttf') format('truetype');
+}
+
+* {font-display: block;}
+
+body {
+    font-family: 'QuestrialRegular';
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+h2 {
+    font-family: 'TheSeasonsRegular';
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    margin-bottom: 20px
+}
+
+h4 {
+
+    font-family: 'TheSeasonsRegular';
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    font-size: 20px;
+    color: green;
+}
+
+.title {
+    font-weight: bold;
+    font-family: 'TheSeasonsRegular';
+    margin: 0;
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.desc {
+    font-family: 'QuestrialRegular';
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 0 20px 0 20px;
+    color: rgb(0, 0, 0);
+}
+
+b{
+    font-family: "TheSeasonsRegular";
+}
+
+a {
+    font-family: "TheSeasonsRegular";
+    color: green;
+    text-decoration: none;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 10px;
+}
+
+.content-box {
+    text-align: justify;
+    padding-top: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+    min-height: 500px;
+    transition: transform 0.3s ease; 
+
+}
+
+
+.content-box:hover {
+    transform: scale(1.010); 
+}
+
+.big {
+    width: 50%;
+    margin: 20px;
+}
+
+.small {
+    width: 20%;
+    margin: 20px;
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 700px) {
+    .content-box {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-box {
+        width: 80%;
+    }  
+}
+
+.content-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.content-box img:hover {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transform: scale(1.2);
+    border-radius: 0px;
+}
+
+
+footer {
+    position: relative;
+    width: 100%;
+    background-color: #ffffff; /* Thay đổi màu nền nếu cần */
+    padding: 20px 0; /* Thêm khoảng cách cho footer */
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 20px; 
+    padding: 0; 
+}
+
+.social-list li {
+    margin: 10px;
+    width: 40px; 
+    height: 40px;
+}
+
+    
+
+.social-list li:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    border-radius: 50px;
+}
+
+
+.social-list img {
+
+    width: 40px; 
+    height: 40px; 
+    margin: 0px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.social-list img:hover {
+    transform: scale(1.1); 
+}
+
+/* Media query adjustments */
+@media (max-width: 768px) {
+    .social-list {
+        flex-direction: row; /* Keep items in a row on small screens */
+    }
+}
+
+.play-button {
+    border: none; /* Remove button border */
+    background: transparent; /* Make background transparent */
+    cursor: pointer; /* Change cursor to pointer */
+    outline: none; /* Remove outline */
+    transition: transform 0.5s;
+}
+
+.play-button:hover {
+    transform: scale(1.1); 
+}
+
+.spin {
+    animation: spin 2s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.audio-player {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Background color */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    transform: scale(1);
+}
+
+
+.play-button img{
+    width: 30px;
+    height: 30px;
+}
+
+
+.color-panel {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.color-option {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.color-option:hover {
+    border: 2px solid #f8f8f8;
+    box-sizing: border-box;
+    transform: scale(1.1);
+}
+
+.color-option.selected {
+    border: 2px solid #f8f8f8;
+    box-sizing: border-box;
+    transform: scale(1.5);
+}
+
+
