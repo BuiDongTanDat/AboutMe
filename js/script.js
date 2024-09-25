@@ -38,6 +38,10 @@ document.querySelectorAll('.color-option').forEach(option => {
         if (isSelected) {
             document.body.style.backgroundColor = originalBgColor; 
             colorTitle.style.color = ''; //set to default
+            audio.src = "music/Ocean of Memories.mp3";
+            audio.play();
+            document.querySelector('.audio-player span').textContent = 'Ocean of Memories';
+            playButton.classList.add('spin');
         } else {
             this.classList.add('selected');
             document.body.style.backgroundColor = this.getAttribute('data-color');

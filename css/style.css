@@ -9,7 +9,6 @@
     src: url('../font/QuestrialRegular.ttf') format('truetype');
 }
 
-* {font-display: block;}
 
 body {
     font-family: 'QuestrialRegular';
@@ -49,10 +48,12 @@ h4 {
 }
 
 .desc {
+    text-align: justify;
     font-family: 'QuestrialRegular';
     margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 15px;
-    padding: 0 20px 0 20px;
     color: rgb(0, 0, 0);
 }
 
@@ -108,13 +109,17 @@ a {
 /* Responsive cho màn hình nhỏ hơn */
 @media (max-width: 700px) {
     .content-box {
-        width: 80%;
+        width: 90%;
+    }
+
+    #text-adopt {
+        display: none;
     }
 }
 
 @media (max-width: 480px) {
     .content-box {
-        width: 80%;
+        width:100%;
     }  
 }
 
@@ -153,7 +158,12 @@ footer {
     padding: 0; 
 }
 
+li{
+    margin-right: 20px;;
+}
+
 .social-list li {
+    box-sizing: border-box;
     margin: 10px;
     width: 40px; 
     height: 40px;
@@ -168,10 +178,8 @@ footer {
 
 
 .social-list img {
-
-    width: 40px; 
-    height: 40px; 
-    margin: 0px;
+    width: 100%;
+    height: auto; 
     display: inline-block;
     transition: transform 0.3s ease-in-out; 
 }
