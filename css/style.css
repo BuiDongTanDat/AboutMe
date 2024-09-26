@@ -130,10 +130,11 @@ a {
 .content-box img {
     max-width: 100%;
     height: auto;
+    object-fit: cover;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;;
 }
 
 .content-box img:hover {
@@ -153,49 +154,55 @@ footer {
     padding: 20px 0; /* Thêm khoảng cách cho footer */
 }
 
-.social-list {
-    list-style: none;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    margin-top: 20px; 
-    padding: 0; 
-}
-
 li{
     margin-right: 20px;;
 }
 
+.social-list {
+    list-style: none;
+    display: flex;
+    margin-top: 20px; 
+    padding: 0; 
+    margin-left: 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
 .social-list li {
     box-sizing: border-box;
-    margin: 10px;
-    width: 40px; 
-    height: 40px;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.12s ease-in-out;
 }
-
-    
-
-.social-list li:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-    border-radius: 50px;
-}
-
 
 .social-list img {
     width: 100%;
-    height: auto; 
-    display: inline-block;
-    transition: transform 0.3s ease-in-out; 
+    height: auto;
 }
 
-.social-list img:hover {
-    transform: scale(1.1); 
+.social-list li:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
 }
-
 /* Media query adjustments */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     .social-list {
-        flex-direction: row; /* Keep items in a row on small screens */
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px; 
+    }
+
+    .social-list li {
+        width: 30px;
+        height: 30px;
     }
 }
 

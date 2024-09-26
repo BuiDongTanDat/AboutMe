@@ -1,6 +1,7 @@
 const audio = document.getElementById('audio');
 const playButton = document.getElementById('play-button');
-let isAudioPlaying = false; // Biến kiểm tra trạng thái âm thanh
+const footerColor = document.getElementById('footer-mail-color');
+let isAudioPlaying = false; 
 
 // Handle play button click
 playButton.addEventListener('click', () => {
@@ -38,6 +39,7 @@ document.querySelectorAll('.color-option').forEach(option => {
         if (isSelected) {
             document.body.style.backgroundColor = originalBgColor; 
             colorTitle.style.color = ''; //set to default
+            footerColor.style.color = ''; //set to default
             audio.src = "music/Ocean of Memories.mp3";
             audio.play();
             document.querySelector('.audio-player span').textContent = 'Ocean of Memories';
@@ -46,7 +48,7 @@ document.querySelectorAll('.color-option').forEach(option => {
             this.classList.add('selected');
             document.body.style.backgroundColor = this.getAttribute('data-color');
             colorTitle.style.color = this.getAttribute('bgw'); 
-            
+            footerColor.style.color = this.getAttribute('bgw')
             audio.src = this.getAttribute('data-music');
             audio.play();
             document.querySelector('.audio-player span').textContent = this.getAttribute('txt-music');
