@@ -158,6 +158,11 @@ a {
     border-radius: 0px;
 }
 
+.content-box:hover img.avt-image {
+    transform: scale(1.2); 
+    border-radius: 0px;
+}
+
 
 footer {
     position: relative;
@@ -198,7 +203,7 @@ li{
     width: 100%;
     height: auto; 
     display: inline-block;
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.2s ease-in-out; 
 }
 
 .social-list img:hover {
@@ -225,9 +230,6 @@ li{
     height: 30px;
 }
 
-.play-button:hover {
-    transform: scale(1.1); 
-}
 
 .spin {
     animation: spin 2.5s linear infinite; /* Spin animation */
